@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu;
+}
+
+body {
+    position: relative;
+    padding: 40px 0px;
+    min-height: 100vh;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border-top: 1px solid #CCC;
+    background: #F5F5F5;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 20px;
+  padding: 10px 0px 5px 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #AAA;
+}
+
+.container {
+    margin: 30px auto;
+    width: 800px;
+}
+
+input {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #CCC;
+    background: #FFF;
+}
+
+input[type=submit]:hover {
+  background: #F5F5F5;
+  cursor: pointer;
+}
+
+.right {
+    float:right;
+}
+
+.left {
+    float:left;
+}
+
+.error{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #FFA0A0;
+    border-radius: 8px;
+    background: #FF3030;
+    opacity: 0.8;
+    box-shadow: 0px 0px 10px #000;
+    width: 300px;
+    min-height: 50px;
+    text-align: center;
+    padding: 15px;
+}
+
+.error:hover{
+    opacity: 0.4;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    box-shadow: 0px 0px 30px #AAA;
+}
+
+.modal {
+    content: "";
+    background: rgba(50, 50, 50, 0.1);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    -webkit-backdrop-filter: blur(5px);
+}
+
+table {
+    border-collapse: collapse;
+    width: 40%;
+    margin: 25px auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.fa{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.fa.fa-times.closeCross{
+    float: right;
+    margin: -5px 20px;
+}
+div#center{
+    margin-top: 5%;
+    margin-left: 20%;
+}
+.inputs{
+    margin-left: 35px;
+}
+.inputs2{
+    margin-left: 88px;
+}
+.inputs3{
+    margin-left: 93px;
+}
+.new{
+    margin: 5px;
+}
+select{
+    height: 25px;
+    width: 195px;
+}
+textarea{
+    min-height: 50px;
+    max-height: 75px;
+    min-width: 195px;
+    max-width: 195px;
+}
+input[type=button]{
+    cursor: pointer;
+}
+.mid-left{
+    float: left;
+    margin-left: 5%;
+}
+.mid-right{
+    float: right;
+    margin-right: 5%;
+}
+.bottom-left{
+    position: absolute;
+    float: left;
+    margin-top: 25%;
+    left: -3%;
+}
+.bottom-right{
+    position: absolute;
+    float: right;
+    margin-top: 25%;
+    right: 17.7%;
+}
+footer{
+    display: none;
+}
+/*HOME PAGE*/
+.item{
+    position: relative;
+    float: left;
+    width: calc(33.3% - 25px);
+    margin-top: 5%;
+    border: 2px solid black;
+    height: 200px;
+    text-align: center;
+    margin-left: 25px;
+    box-shadow: 0.1px 0.1px 1px 1px;
+    padding: 30px;
+}
+.btn-purchase{
+    position: absolute;
+    top: 156px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: #fff;
+    border: 1px solid #115f14;
+    width: 100%;
+    height: 40px;
+    transition: .2s linear;
+    cursor: pointer;
+}
+.btn-order{
+    background-color: #4CAF50;
+    color: #fff;
+    border: 1px solid #115f14;
+    width: 100%;
+    height: 40px;
+    transition: .2s linear;
+    cursor: pointer;
+}
+.btn-order:hover{
+    background-color: lightgreen;
+}
+.fa-shopping-basket{
+    font-size: 20px !important;
+    color: #fff;
+}
+/*Product toevoegen aan winkelmand venster*/
+#productPage{
+    left: 50%;
+    position: absolute;
+    height: 300px;
+    display: none;
+    transition: .3s linear;
+    top: 100px;
+}
+.popup{
+    position: relative;
+    left: 0%;
+    background-color: #eee;
+    width: 550px;
+    z-index: 99999;
+    border-radius: unset;
+    height: 300px;
+}
+.header{
+    background-color: #ddd;
+    height: 25px;
+}
+.close{
+    float: right;
+    right: 0;
+    cursor: pointer;
+    margin: 5px;
+    position: absolute;
+    color: #ffd;
+}
+.addCart{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: right;
+}
+table#winkelmand{
+    border-collapse: collapse;
+    width: 100%;
+}
+table#winkelmand, table#winkelmand td, table#winkelmand th{
+    text-align: left;
+}
+table#winkelmand th{
+    border-bottom: 1px dotted grey;
+}
+table#winkelmand td, table#winkelmand th{
+    padding: 15px;
+    background-color: #eee;
+    color: black;
+}
+#categorie{
+    margin-top: 1.5%;
+    float: left;
+    background-color: #eee;
+    width: 15%;
+    height: 100%;
+}
+#categorie a{
+    text-decoration: none;
+    color: black;
+    background-color: blue;
+}
+#categorie h4{
+    text-align: center;
+    padding-top: 5px;
+}
+#categorie h5{
+    width: 100%;
+    height: 25px;
+    color: black;
+    text-align: center;
+}
+#categorie h5:hover{
+    color: gray;
+    background-color: #ddd;
+}
+i.count {   
+    text-align:center;
+    vertical-align:middle;
+    position: relative;
+    color: #555;
+    transition: .1s linear;
+}
+i.count:hover{
+    transform: scale(1.2);
+}
+.badge:after{
+    position: absolute;
+    background: rgba(255,0,0,1);
+    height: 1.3rem;
+    top: -0.6rem;
+    right: -0.9rem;
+    width: 1.3rem;
+    text-align: center;
+    line-height:1.3rem;;
+    font-size: 16px;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid red;
+    font-family: ubuntu;
+    font-weight: bold;
+}
+table#shopping_cart{
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 75px;
+}
+table#shopping_cart, table#shopping_cart td, table#shopping_cart th{
+    text-align: center;
+}
+table#shopping_cart th{
+    border-bottom: 1px dotted grey;
+    background-color: #bbb !important;
+    text-align: center;
+}
+table#shopping_cart td, table#shopping_cart th{
+    padding-top: 15px;
+    background-color: #eee;
+    color: black;
+}
+table#shopping_cart td{
+    border-top: double 3px black;
+}
+i.fa-remove{
+    transition: .1s linear;
+    cursor: pointer;
+}
+i.fa-remove:hover{
+    transform: scale(1.2);
+    color: red;
+}
+.href:hover{
+    background-color: lightblue;
+}
